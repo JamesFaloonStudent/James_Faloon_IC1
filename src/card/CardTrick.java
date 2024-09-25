@@ -35,7 +35,7 @@ public class CardTrick {
 
         int index = 0;
         for (int i = 0; i < Card.SUITS.length; i++) {
-            if (luckyCard.getSuit() == Card.SUITS[i]) {
+            if (luckyCard.getSuit().equals(Card.SUITS[i])) {
                 index = i;
 
             }
@@ -48,7 +48,7 @@ public class CardTrick {
         // System.out.print("Enter Card Value (1:13) : ");
         // int value = input.nextInt();
         
-        // System.out.print("Enter Card Suit wher (0=hearts, 1=Diamonds, 2=Spades, 3=Clubs) : ");
+        // System.out.print("Enter Card Suit where (0=hearts, 1=Diamonds, 2=Spades, 3=Clubs) : ");
         // int suit = input.nextInt();
         
         

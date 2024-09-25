@@ -27,16 +27,32 @@ public class CardTrick {
             System.out.println(magicHand[i].getSuit() + " " + magicHand[i].getValue());
 
         }
+
+
+       Card luckyCard = new Card();
+        luckyCard.setValue(10);
+        luckyCard.setSuit(Card.SUITS[0]);
+
+        int index = 0;
+        for (int i = 0; i < Card.SUITS.length; i++) {
+            if (luckyCard.getSuit() == Card.SUITS[i]) {
+                index = i;
+
+            }
+        }
+
+
+        System.out.println(findCard(magicHand, luckyCard.getValue(), index));
         
         
-        System.out.print("Enter Card Value (1:13) : ");
-        int value = input.nextInt();
+        // System.out.print("Enter Card Value (1:13) : ");
+        // int value = input.nextInt();
         
-        System.out.print("Enter Card Suit wher (0=hearts, 1=Diamonds, 2=Spades, 3=Clubs) : ");
-        int suit = input.nextInt();
+        // System.out.print("Enter Card Suit wher (0=hearts, 1=Diamonds, 2=Spades, 3=Clubs) : ");
+        // int suit = input.nextInt();
         
         
-        System.out.println(findCard(magicHand, value, suit));
+        // System.out.println(findCard(magicHand, value, suit));
         
         
         //insert code to ask the user for Card value and suit, create their card

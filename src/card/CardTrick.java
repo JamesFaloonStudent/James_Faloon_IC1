@@ -32,10 +32,13 @@ public class CardTrick {
         System.out.print("Enter Card Value (1:13) : ");
         int value = input.nextInt();
         
-        System.out.print("Enter Card Suit wher (0=hearts, 1=Diamonds, 2=Clubs, 3=Spades) : ");
+        System.out.print("Enter Card Suit wher (0=hearts, 1=Diamonds, 2=Spades, 3=Clubs) : ");
         int suit = input.nextInt();
-        String output = findCard(magicHand, value, suit);
-        System.out.println(output);
+        
+        
+        System.out.println(findCard(magicHand, value, suit));
+        
+        
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
@@ -44,14 +47,18 @@ public class CardTrick {
     
     
     
-    private static String findCard(Card[] array, int value, int suit) {
-        for (Card card : array) {
-            if (card.getValue() == value && card.getSuit().equals(Card.SUITS[suit].toLowerCase())) {
-            return "Your card is in the magic hand";
+   private static String findCard (Card[] magicHand, int value, int suit) {
+       
+       for (Card card : magicHand) {
+            if (card.getValue() == value && card.getSuit().equals(Card.SUITS[suit])) {
+                return "Your card is in the magic hand";
             }
         }
-        
-        return "card not found";
-    }
+       
+       return "Sorry your Card in not in the magic hand";
+       
+    
+    
+}
     
 }
